@@ -4,9 +4,9 @@ Active/Passive Information Gathering By Hunting Subdomains
 
 ## Description
 
-SubdomainF is a bash script designed for hunting subdomains. 
-It is a tool used for reconnaissance and discovering subdomains, checks if they are "alive", takes a screenshot of every alive subdomain, and checks the subdomain's IP addresses.
-The script utilizes various techniques and tools to gather information and expand the scope of a target domain's subdomain list.
+SubdomainF is a bash script designed for hunting subdomains. <br>
+It is a tool used for reconnaissance and discovering subdomains, checks if they are "alive", takes a screenshot of every alive subdomain, and checks the subdomain's IP addresses. <br>
+The script utilizes various techniques and tools to gather information and expand the scope of a target domain's subdomain list.<br>
 The script can be Active/passive depending on the user's choice.
 
 ### Installing
