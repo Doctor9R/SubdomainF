@@ -1,6 +1,6 @@
 # SubdomainF
 
-Active & Passive Information Gathering By Hunting Subdomains
+Passive Information Gathering By Hunting Subdomains
 
 ## Description
 
@@ -18,8 +18,8 @@ The script utilizes various techniques and tools to gather information and expan
 * sudo ./SubdomainF
 
 ## The tool performs the activation in the following tools -
-* Assetfinder (Passive) by tomnomnom &copy;
-* Amass (Passive) by OWSAP &copy;
-* GoWitness (Passive) by sensepost &copy;
-* Httprobe (Active) by tomnomnom &copy;
-* Subjack (Active) by haccer &copy;
+* Assetfinder by tomnomnom &copy;
+* Amass by OWSAP &copy;
+* GoWitness by sensepost &copy;
+* Httprobe by tomnomnom &copy;
+* Subjack by haccer &copy;
