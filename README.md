@@ -10,12 +10,13 @@ The script utilizes various techniques and tools to gather information and expan
 
 ### Installing
 ```
-* git clone https://github.com/Doctor9R/SubdomainF.git
+git clone https://github.com/Doctor9R/SubdomainF.git
 ```
 
 ### Executing program
 
 * sudo ./SubdomainF
+* chmod +x SubdomainF
 
 ## The tool performs the activation in the following tools -
 * Assetfinder by tomnomnom &copy;
