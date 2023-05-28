@@ -10,7 +10,7 @@ The script utilizes various techniques and tools to gather information and expan
 
 ### Installing
 ```
-* git clone *xxx* (Will be available for download today)
+* git clone https://github.com/Doctor9R/SubdomainF.git
 ```
 
 ### Executing program
