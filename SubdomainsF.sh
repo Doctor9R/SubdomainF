@@ -14,21 +14,15 @@ echo "$(tput setaf 7)"
 echo
 echo " [?] Checks if Go is installed.. "
 sleep 1
-
-if which golang >/dev/null; then
-    echo " [!] Go is already installed."
-else
+if ! command -v go &>/dev/null; then
     echo " [+] Go is not installed. Downloading and installing..."
-	wget https://go.dev/dl/go1.20.4.linux-amd64.tar.gz >/dev/null 2>&1
-	sudo tar -xzf go1.20.4.linux-amd64.tar.gz >/dev/null 2>&1
-	sudo mv go /usr/local >/dev/null 2>&1
-	export PATH=$PATH:/usr/local/go/bin >> ~/.bashrc
-	source ~/.bashrc
-	rm -r go1.20.4.linux-amd64.tar.gz
+	sudo apt install golang-go >/dev/null 2>&1
     echo " [!] Go has been downloaded and installed."
+else
+	echo " [!] Go is already installed."
 fi
 echo
-
+sleep 1
 echo " [?] Checks if Subjack is installed.. "
 if ! command -v subjack &> /dev/null; then
     echo " [+] Subjack is not installed. Downloading and installing..."
@@ -39,13 +33,14 @@ else
     
 fi
 echo
+sleep 1
 echo " [?] Checks if Google-Chrome is installed.. "
 sleep 1
 if command -v google-chrome-stable >/dev/null; then
     echo " [!] Google Chrome is already installed."
 else
     echo " [+] Google Chrome is not installed. Installing..."
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add ->/dev/null 2>&1
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - >/dev/null 2>&1
     echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list >/dev/null 2>&1
     sudo apt update >/dev/null 2>&1
     sudo apt install google-chrome-stable -y >/dev/null 2>&1
@@ -95,10 +90,10 @@ echo " [+] Harvesting subdomains with Assetfinder .. "
 echo " [!] Finding the subdomains in the Assetfinder tool finished. [!] "
 echo
 
-echo "$(tput setaf 9) [*] This can be a long time, it takes too long press CNTRL+C "
+echo "$(tput setaf 9) [*] This can take sometime, Please be patient! "
 echo " [!] Harvesting subdomains with Amass .. "
 echo $(tput setaf 7)
-amass enum -d $url >> $url/Subdomains.txt 
+timeout 3m amass enum -d $url >> $url/Subdomains.txt 
 sort -u $url/Subdomains.txt -o $url/Subdomains.txt
 echo " [!] Finding the subdomains in the Amass tool finished. [!] "
 echo
