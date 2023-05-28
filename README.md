@@ -10,7 +10,7 @@ The script utilizes various techniques and tools to gather information and expan
 
 ### Installing
 ```
-git clone https://github.com/Doctor9R/SubdomainF.git
+git clone https://github.com/HooliganV/SubdomainF.git
 ```
 
 ### Executing program
