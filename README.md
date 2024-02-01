@@ -1,6 +1,6 @@
 # SubdomainF
 
-Passive Information Gathering By Hunting Subdomains
+Active Information Gathering By Hunting Subdomains
 
 ## Description
 
